@@ -48,7 +48,7 @@ def calculate_statistics(numbers: list[int | float]) -> tuple[int | float, int| 
     return minimum, maximum, average
 
 
-def calculate_average(*numbers):
+def calculate_average(*numbers: int | float) -> float:
     """Обчислює середнє арифметичне довільної кількості чисел"""
     if not numbers:
         raise ValueError("Потрібно передати хоча б одне число.")
@@ -60,7 +60,7 @@ def calculate_average(*numbers):
     return sum(numbers) / len(numbers)
 
 
-def creat_profile(name, **kwargs):
+def creat_profile(name, **kwargs: object) -> dict[str, object]:
     """Створює словник профілю користувача"""
     if not isinstance(name, str) or not name.strip():
         raise ValueError("Ім'я повинно бути непорожнім рядком.")
@@ -76,7 +76,7 @@ def creat_profile(name, **kwargs):
     return profile
 
 
-def add_product(name, products=None):
+def add_product(name: str, products: list[str] | None = None) -> list[str]:
     """Додає товар до нового або переданого списку"""
     if products is None:
         products = []
