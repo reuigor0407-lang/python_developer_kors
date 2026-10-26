@@ -1,4 +1,4 @@
-def calculate_total(price, quantity):
+def calculate_total(price: int | float, quantity: int) -> int | float:
     """Обчислює загальну вартість замовлення"""
     if isinstance(price, bool) or not isinstance(price, (int, float)):
         raise TypeError("Ціна повинна бути числом.")
@@ -15,7 +15,7 @@ def calculate_total(price, quantity):
     return price * quantity
 
 
-def apply_discount(total, discount_percent=0):
+def apply_discount(total: int | float   , discount_percent: int | float =0) -> int | float:
     """Застосовує знижку у відсотках до загальної суми"""
     if isinstance(total, bool) or not isinstance(total, (int, float)):
         raise TypeError("Загальна сума повинна бути числом.")
@@ -32,7 +32,7 @@ def apply_discount(total, discount_percent=0):
     return total * (1 - discount_percent / 100)
 
 
-def calculate_statistics(numbers):
+def calculate_statistics(numbers: list[int | float]) -> tuple[int | float, int| float, int| float]:
     """Повертає мінімум, максимум і середнє арифметичне."""
     if not numbers:
         raise ValueError("Послідовність не може бути порожньою.")
