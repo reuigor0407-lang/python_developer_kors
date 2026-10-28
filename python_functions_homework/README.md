@@ -15,6 +15,9 @@
 - 'calculate_total(price, quantity)' - обчислює вартість замовлення.
 - 'apply_discount(total, discount_percent=0)' - застосовує знижку.
 - 'calculate_statistics(numbers)' - повертає мінімум, максимум і середнє арифметичне.
+- 'calculate_average' - обчислює середнє арифметичне довільної кількості чисел
+- 'creat_profile' - створює словник профілю користувача
+- 'add_product' - додає товар до нового або переданого списку
 
 ## Запуск
 

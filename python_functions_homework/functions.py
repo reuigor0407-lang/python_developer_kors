@@ -41,11 +41,7 @@ def calculate_statistics(numbers: list[int | float]) -> tuple[int | float, int| 
         if isinstance(number, bool) or not isinstance(number, (int, float)):
             raise TypeError("Усі елементи повинні бути числами.")
 
-    minimum = min(numbers)
-    maximum = max(numbers)
-    average = sum(numbers) / len(numbers)
-
-    return minimum, maximum, average
+    return min(numbers), max(numbers), sum(numbers) / len(numbers)
 
 
 def calculate_average(*numbers: int | float) -> float:
