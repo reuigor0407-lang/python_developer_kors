@@ -15,10 +15,8 @@ def main():
 
     # Завдання 1.3: Обчислення статистики
     print("\nЗавдання 1.3: Обчислення статистики")
-    minimum, maximum, average = calculate_statistics([10, 20, 30])
-    print("Мінімум: ", minimum)
-    print("Максимум: ", maximum)
-    print("Середнє арифметичне", average)
+    result = calculate_statistics([10, 20, 30])
+    print(result)
 
     # Перевірка некоректних аргументів
     print("\nПеревірка некоректних даних")

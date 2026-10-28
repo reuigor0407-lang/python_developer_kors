@@ -32,7 +32,7 @@ def apply_discount(total: int | float   , discount_percent: int | float =0) -> i
     return total * (1 - discount_percent / 100)
 
 
-def calculate_statistics(numbers: list[int | float]) -> tuple[int | float, int| float, int| float]:
+def calculate_statistics(numbers: list[int | float]) -> str:
     """Повертає мінімум, максимум і середнє арифметичне."""
     if not numbers:
         raise ValueError("Послідовність не може бути порожньою.")
@@ -41,7 +41,7 @@ def calculate_statistics(numbers: list[int | float]) -> tuple[int | float, int| 
         if isinstance(number, bool) or not isinstance(number, (int, float)):
             raise TypeError("Усі елементи повинні бути числами.")
 
-    return min(numbers), max(numbers), sum(numbers) / len(numbers)
+    return f"Мінімум: {min(numbers)}: \nМаксимум: {max(numbers)}: \nСереднє арифметичне: {sum(numbers) / len(numbers)}"
 
 
 def calculate_average(*numbers: int | float) -> float:
